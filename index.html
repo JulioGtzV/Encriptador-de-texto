@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/encriptado.png">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+
+    <!--Encabezado-->
+    <header>
+        <a href="#" rel="">
+            <img src="./img/logo.png" alt="Logo de Alura" class="logo">
+        </a>
+    </header>
+
+    <!--Sección Principal-->
+    <main>
+        <section class="encriptador">
+            <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="encriptador-aviso">
+                <img src="./img/aviso.svg" alt="Imagen Aviso" class="img-aviso">
+                <p class="texto-aviso">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="encriptador-contenedor">
+                <button type="submit" class="btn-encriptar">Encriptar</button>
+                <button type="submit" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="tarjeta-lateral">
+            <div class="tarjeta-contenedor">
+                <img src="./img/muñeco.png" alt="Imagen Muñeco" class="img-muñeco">
+                <p class="texto-uno">Ningún mensaje fue encontrado</p>
+                <p class="texto-dos">Ingrese el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <textarea type="mensaje" class="evaluar" readonly></textarea>
+            <button type="submit" class="btn-copiar">Copiar</button>
+        </section>
+    </main>
+
+    <!--Pie de Página-->
+    <footer>
+        <p class="copyright">&copy; copyright 2024 - Encriptador de Texto - Desarrollado por Julio 
+            Alejandro Gutiérrez Velázquez.</p>
+            <a href="https://www.linkedin.com/in/julio-guti%C3%A9rrez-vel%C3%A1zquez-979bab247/" rel="">
+                <img src="./img/linkedin.svg" alt="Logo linkedin" class="linkedin">
+            </a>
+
+            <a href="https://github.com/" rel="">
+                <img src="./img/github.svg" alt="Logo github" class="github">
+            </a>
+    </footer>
+
+    <script src="./js/app.js"></script>
+
+    
+</body>
+</html>
