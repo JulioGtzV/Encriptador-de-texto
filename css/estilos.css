@@ -13,6 +13,14 @@
     --Medium-Blue:#0A38718A;
     --Gray:#343A40;
     --Gree:#495057;
+    --Black:#131313;
+    --Yellow:#FFDFD3;
+    --Orange: #D291BC;
+    --Sky-Blue: #FEC8D8;
+    --Pink-Lavender:#F1C0E8;
+    --Baby-Pink:#FFCFD2;
+    --Champagne-Pink:#FDE4CF;
+
 }
 
 *{
@@ -112,7 +120,7 @@ main {
     top: 526px;
 }
 
-.btn-encriptar {
+.btn-encriptar, .btn-desencriptar {
     width: 328px;
     height: 67px;
     padding: 24px;
@@ -121,41 +129,26 @@ main {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    color: var(--White);
-    background: var(--Dark-Blue);
-    border: 1px solid var(--Dark-Blue);
+    color: var(--Black);
+    background: none;
+    border: 2px solid var(--Yellow);
     border-radius: 24px;
     cursor: pointer;
-    box-shadow: 0 20px 29px -5px var(--RGBA);
-}
-
-.btn-encriptar:active {
-    box-shadow: inset 2px 2px 4px var(--Font), inset -3px -4px 8px var(--Dark-Blue);
-    color: var(--Whiite-Blue);
-}
-
-.btn-desencriptar {
-    width: 328px;
-    height: 67px;
-    padding: 24px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    color: var(--Dark-Blue);
-    background: var(--Whiite-Blue);
-    border: 1px solid var(--Dark-Blue);
-    border-radius: 24px;
-    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    background-color: var(--Yellow);
     box-shadow: 0 20px 29px -5px var(--RGBA);
 }
 
 .btn-copiar:active,
-.btn-desencriptar:active {
-    box-shadow: inset 2px 2px 4px var(--Dark-Blue), inset -3px -4px 8px var(--Font);
-    color: var(--Medium-Blue);
+.btn-desencriptar:active, 
+.btn-encriptar:active {
+    box-shadow: inset 2px 2px 4px var(--Orange), inset -3px -4px 8px var(--Orange);
+    color: var(--Orange);
+    transform: scale(0.9);
 }
+
 
 .tarjeta-lateral {
     width: 270px;
@@ -234,16 +227,53 @@ main {
     line-height: 19px;
     text-align: center;
     background: var(--Whiite-Blue);
-    border: 1px solid var(--Dark-Blue);
+    border: 1px solid var(--Champagne-Pink);
     border-radius: 20px;
     cursor: pointer;
+    color: var(--Black);
+    overflow: hidden;
+    transition: all 0.3s;
+    background-color: var(--Champagne-Pink);
+    box-shadow: 0 20px29px -5px var(--RGBA);
+
 }
 
 .btn-encriptar:hover,
 .btn-desencriptar:hover,
 .btn-copiar:hover {
+    background-color:var(--Sky-Blue);
+    color: var(--Gree);
+    font-weight: bolder;
     transform: scale(0.97);
 }
+
+.btn-encriptar::before, .btn-copiar::before {
+    content: "";
+    position: absolute;
+    width: 151px;
+    height: 120%;
+    background-color: var(--Orange);
+    top: 50%;
+    transform: skewX(30deg) translate(-280px, -50px);
+    transition: all 0.5s;
+}
+
+.btn-desencriptar::before {
+    content: "";
+    position: absolute;
+    width: 159px;
+    height: 120%;
+    background-color: var(--Orange);
+    top: 50%;
+    transform: skewX(30deg) translate(-280px, -50px);
+    transition: all 0.5s;
+}
+
+.btn-encriptar:hover::before, .btn-desencriptar:hover::before, .btn-copiar:hover::before {
+    transform: skewX(30deg) translate(150%, -50%);
+    transition-delay: 0.1s;
+}
+
 
 /********Pie de Página********/
 

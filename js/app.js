@@ -38,7 +38,7 @@ btnEncriptar.addEventListener("click", e=> {
         },1500);
     }
 
-    else if (texto !== texto.toLowerCase()){
+    /*else if (texto !== texto.toLowerCase()){
         aviso.style.background = "#0A3871";
         aviso.style.color = "#FFFF"
         aviso.style.fontWeight = "800"
@@ -47,7 +47,7 @@ btnEncriptar.addEventListener("click", e=> {
         setTimeout(()=>{
             aviso.removeAttribute("style");
         },1500);
-    }
+    }*/
 
     else {
         texto = texto.replace(/e/mg, "enter");
@@ -91,7 +91,7 @@ btnDesencriptar.addEventListener("click", e=> {
         },1500);
     }
 
-    else if (texto !== texto.toLowerCase()){
+    /*else if (texto !== texto.toLowerCase()){
         aviso.style.background = "#0A3871";
         aviso.style.color = "#FFFF"
         aviso.style.fontWeight = "800"
@@ -100,7 +100,7 @@ btnDesencriptar.addEventListener("click", e=> {
         setTimeout(()=>{
             aviso.removeAttribute("style");
         },1500);
-    }
+    }*/
 
     else {
         texto = texto.replace(/enter/mg, "e");
@@ -114,6 +114,13 @@ btnDesencriptar.addEventListener("click", e=> {
         contenido.remove();
     }
 });
+
+
+//******Convertir mayúsculas a minúsculas ******/
+
+function minuscula(e){
+    e.value = e.value.toLowerCase();
+}
 
 //*******Botón de Copiar *******/
 
